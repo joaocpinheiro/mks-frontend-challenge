@@ -24,7 +24,7 @@ export function MainContent() {
             />
             <CardContent>
               <ProductText>Apple Watch Series 4 GPS</ProductText>
-              <PriceButton>R$399</PriceButton>
+              <PriceButton>R$499</PriceButton>
             </CardContent>
             <SubText>Redesigned from scratch and completely revised.</SubText>
             <BuyButton>
