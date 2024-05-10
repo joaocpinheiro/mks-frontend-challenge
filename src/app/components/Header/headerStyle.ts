@@ -1,7 +1,7 @@
 'use client'
 
 import styled from 'styled-components'
-import { defaultTheme } from '../themes/defaultTheme'
+import { defaultTheme } from '../../themes/defaultTheme'
 
 export const HeadLogo = styled.header`
   background-color: ${defaultTheme.colors.mainBlue};
@@ -26,6 +26,7 @@ export const HeadLogo = styled.header`
 
 export const ButtonChart = styled.button`
   display: flex;
+  font-family: inherit;
   background-color: white;
   margin-left: auto;
   margin-right: 23px;

@@ -4,7 +4,7 @@ import StyledComponentsRegistry from '../lib/registry'
 import GlobalThemeWrapper from '../themes/GlobalThemeWrapper'
 
 const montserrat = Montserrat({
-  weight: ['300', '400', '500', '700'],
+  weight: ['300', '400', '500', '600', '700'],
   subsets: ['latin'],
   display: 'swap',
   fallback: ['Arial', 'sans-serif'],
@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body className={montserrat.className}>
         <StyledComponentsRegistry>
           <GlobalThemeWrapper>
