@@ -1,7 +1,7 @@
 export const defaultTheme = {
   colors: {
     mainBlue: '#0F52BA',
-    secondary: '#ff00ff',
+    mainBrown: 'rgba(55, 55, 55, 1)',
     // adicione outras cores conforme necessário
   },
 }
