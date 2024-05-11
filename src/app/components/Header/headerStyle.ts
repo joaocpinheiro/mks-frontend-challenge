@@ -24,7 +24,19 @@ export const HeadLogo = styled.header`
   }
 
   @media (min-width: 768px) {
-    margin-bottom: 116px;
+    margin-bottom: 110px;
+    height: 100px;
+
+    & > h1 {
+      margin-left: 65px;
+      font-size: 40px;
+      line-height: 19px;
+    }
+
+    & > p {
+      font-size: 20px;
+      line-height: 19px;
+    }
   }
 `
 
@@ -50,5 +62,16 @@ export const ButtonCart = styled.button`
   }
 
   & span {
+    font-size: 18px;
+  }
+
+  @media (min-width: 768px) {
+    width: 70px;
+    height: 35px;
+
+    & > img {
+      width: 19px;
+      height: 18px;
+    }
   }
 `

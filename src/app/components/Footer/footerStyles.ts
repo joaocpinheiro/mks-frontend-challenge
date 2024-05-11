@@ -12,7 +12,6 @@ export const FooterContainer = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
 
   & > p {
     margin: 0 auto;
