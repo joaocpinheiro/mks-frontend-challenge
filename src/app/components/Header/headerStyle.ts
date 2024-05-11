@@ -22,9 +22,13 @@ export const HeadLogo = styled.header`
     color: white;
     font-weight: 300;
   }
+
+  @media (min-width: 768px) {
+    margin-bottom: 116px;
+  }
 `
 
-export const ButtonChart = styled.button`
+export const ButtonCart = styled.button`
   display: flex;
   font-family: inherit;
   background-color: white;

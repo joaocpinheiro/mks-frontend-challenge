@@ -9,6 +9,7 @@ import {
   CardButtonsWrapper,
   CardCartContent,
   CardCartWrapper,
+  TextButtonContent,
 } from './cardCartStyles'
 import { PriceButton } from '@/app/themes/globalStyle'
 
@@ -28,13 +29,17 @@ export function CardCart() {
             />
             <CardCartContent>
               <ProductText>Apple Watch Series 4 GPS</ProductText>
-              <CardButtonsWrapper>
-                <CardButtonAmountContent>
-                  <CardButtonAmountDecrement>-</CardButtonAmountDecrement>
 
-                  <CardButtonAmountNumber>1</CardButtonAmountNumber>
-                  <CardButtonAmountIncrement>+</CardButtonAmountIncrement>
-                </CardButtonAmountContent>
+              <CardButtonsWrapper>
+                <TextButtonContent>
+                  <p>Qtd</p>
+                  <CardButtonAmountContent>
+                    <CardButtonAmountDecrement>-</CardButtonAmountDecrement>
+
+                    <CardButtonAmountNumber>1</CardButtonAmountNumber>
+                    <CardButtonAmountIncrement>+</CardButtonAmountIncrement>
+                  </CardButtonAmountContent>
+                </TextButtonContent>
                 <PriceButton>R$399</PriceButton>
               </CardButtonsWrapper>
             </CardCartContent>

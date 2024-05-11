@@ -8,6 +8,10 @@ export const ArticleWrapper = styled.article`
   margin-bottom: 0;
   margin-top: 18px;
   margin-top: 102px;
+
+  @media (min-width: 768px) {
+    margin-top: 110px;
+  }
 `
 
 export const CardCartWrapper = styled.div`
@@ -33,6 +37,16 @@ export const CardCartWrapper = styled.div`
     color: black;
     width: 21px;
     cursor: pointer;
+
+    @media (min-width: 768px) {
+      background-color: black;
+      color: white;
+      font-size: 14px;
+      text-align: center;
+      top: -10px;
+      right: -10px;
+      border-radius: 50%;
+    }
   }
 
   & img {
@@ -40,11 +54,43 @@ export const CardCartWrapper = styled.div`
     width: 80px;
     height: 95px;
   }
+
+  @media (min-width: 768px) {
+    width: 379px;
+    height: 95px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 13px;
+
+    & img {
+      width: 46px;
+      height: 57px;
+      translate: 0 -10px;
+      margin-right: 0px;
+    }
+  }
 `
 
 export const CardCartContent = styled.div`
   align-items: center;
   justify-content: center;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    align-items: center;
+    justify-content: center;
+
+    & h2 {
+      max-width: 113px;
+    }
+  }
 `
 
 export const CardButtonsWrapper = styled.div`
@@ -52,6 +98,28 @@ export const CardButtonsWrapper = styled.div`
   align-items: center;
   justify-content: space-around;
   margin-bottom: 21px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+`
+
+export const TextButtonContent = styled.div`
+  & > p {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    align-items: center;
+    justify-content: center;
+    & > p {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1px;
+      margin-top: -10px;
+      font-size: 9px;
+    }
+  }
 `
 
 export const CardButtonAmountContent = styled.div`
@@ -66,12 +134,19 @@ export const CardButtonAmountContent = styled.div`
   font-weight: 400;
   color: black;
   margin-right: 29px;
+
+  @media (min-width: 768px) {
+    min-width: 60px;
+    font-size: 14px;
+  }
 `
 
-export const CardButtonAmountDecrement = styled.span`
+export const CardButtonAmountDecrement = styled.button`
   width: 33%;
   text-align: center;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
 `
 
 export const CardButtonAmountNumber = styled.span`
@@ -79,10 +154,18 @@ export const CardButtonAmountNumber = styled.span`
   border-right: 0.2px solid rgba(191, 191, 191, 1);
   border-left: 0.2px solid rgba(191, 191, 191, 1);
   text-align: center;
+  background-color: transparent;
+  border-top: none;
+  border-bottom: none;
+
+  @media (min-width: 768px) {
+  }
 `
 
-export const CardButtonAmountIncrement = styled.span`
+export const CardButtonAmountIncrement = styled.button`
   width: 33%;
   text-align: center;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
 `

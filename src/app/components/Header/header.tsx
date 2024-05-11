@@ -1,12 +1,13 @@
 'use client'
 
 import React, { useState } from 'react'
-import { ButtonChart, HeadLogo } from './headerStyle'
+import { ButtonCart, HeadLogo } from './headerStyle'
 import Image from 'next/image'
 import { Sidebar } from '../Sidebar/sidebar'
 
 export function Header() {
   const [sidebar, setSidebar] = useState(false)
+
   function showSidebar() {
     setSidebar(!sidebar)
   }
@@ -16,7 +17,8 @@ export function Header() {
       {sidebar && <Sidebar active={setSidebar} />}
       <h1>MKS</h1>
       <p>Sistemas</p>
-      <ButtonChart onClick={showSidebar}>
+
+      <ButtonCart onClick={showSidebar}>
         <Image
           src="/header/shoppChart.png"
           priority
@@ -25,7 +27,7 @@ export function Header() {
           alt=""
         />
         <span>0</span>
-      </ButtonChart>
+      </ButtonCart>
     </HeadLogo>
   )
 }

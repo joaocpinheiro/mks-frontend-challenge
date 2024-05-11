@@ -8,9 +8,10 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: "Montserrat", sans-serif;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     border: 0;
     max-width: 1440px;
+    height: 100vh;
   }
 
   a {
@@ -19,6 +20,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   * {
+  }
+  p{
   }
 `
 
@@ -33,6 +36,7 @@ export const PriceButton = styled.button`
   border: none;
   color: white;
   line-height: 15px;
+  cursor: pointer;
 `
 
 export const BuyButton = styled.button`
@@ -52,6 +56,7 @@ export const BuyButton = styled.button`
   justify-content: center;
   margin-bottom: 0;
   border-bottom: 0;
+  cursor: pointer;
 
   & > img {
     padding: 0;

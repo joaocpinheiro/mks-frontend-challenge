@@ -10,7 +10,24 @@ export const SidebarWrapper = styled.div`
   width: 330px;
   height: 100vh;
   z-index: 10;
-  transition: transform 0.3s ease-in-out;
+  box-shadow: -5px 0 5px 0 rgba(0, 0, 0, 0.13);
+
+  @media (min-width: 768px) {
+    width: 486px;
+  }
+  animation: animateOpen 0.3s ease;
+
+  @keyframes animateOpen {
+    0% {
+      right: -462px;
+      opacity: 0;
+    }
+
+    100% {
+      right: 0;
+      opacity: 1;
+    }
+  }
 `
 
 export const SidebarBody = styled.div`
@@ -62,6 +79,10 @@ export const BlackCloseButton = styled.button`
   max-width: 330px;
   z-index: 10;
   cursor: pointer;
+
+  @media (min-width: 768px) {
+    color: white;
+  }
 `
 
 export const TotalContainer = styled.div`
@@ -83,6 +104,12 @@ export const TotalContainer = styled.div`
     line-height: 15px;
     color: white;
   }
+
+  @media (min-width: 768px) {
+    position: absolute;
+    bottom: 60px;
+    background-color: ${defaultTheme.colors.mainBlue};
+  }
 `
 
 export const FinishButton = styled.button`
@@ -97,4 +124,10 @@ export const FinishButton = styled.button`
   font-weight: 700;
   font-size: 20px;
   margin-top: 5px;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    bottom: 0;
+  }
 `

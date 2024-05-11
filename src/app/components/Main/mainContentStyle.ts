@@ -6,6 +6,24 @@ export const MainWrapper = styled.main`
   grid-template-columns: 1fr;
   margin-bottom: 0;
   margin-top: 18px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `
 
 export const CardWrapper = styled.div`
@@ -22,6 +40,10 @@ export const CardWrapper = styled.div`
     margin-top: 20px;
     width: 127px;
     height: 158.82px;
+  }
+
+  @media (min-width: 1024px) {
+    margin-right: 22px;
   }
 `
 
