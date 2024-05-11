@@ -38,6 +38,7 @@ export const ButtonChart = styled.button`
   border-radius: 8px;
   justify-content: space-around;
   font-size: 12px;
+  cursor: pointer;
 
   & img {
     width: 10.98px;

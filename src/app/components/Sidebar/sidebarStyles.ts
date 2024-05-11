@@ -17,6 +17,16 @@ export const SidebarBody = styled.div`
   background-color: ${defaultTheme.colors.mainBlue};
   height: 100vh;
   overflow: hidden;
+  overflow-y: auto;
+`
+
+export const HeaderSidebarContent = styled.div`
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  background: ${defaultTheme.colors.mainBlue};
 
   & > h2 {
     font-weight: 700;
@@ -25,6 +35,7 @@ export const SidebarBody = styled.div`
     color: white;
     margin-left: 32px;
     max-width: 178px;
+    z-index: 10;
   }
 `
 
@@ -35,7 +46,7 @@ export const UnorderList = styled.ul`
   display: block;
   transition: all 0.5s ease;
 `
-export const BgBlackButton = styled.button`
+export const BlackCloseButton = styled.button`
   background-color: black;
   color: ${defaultTheme.colors.mainBlue};
   font-family: inherit;
@@ -49,4 +60,41 @@ export const BgBlackButton = styled.button`
   height: 46px;
   border-radius: 50%;
   max-width: 330px;
+  z-index: 10;
+  cursor: pointer;
+`
+
+export const TotalContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  & > h2 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 15px;
+    color: white;
+  }
+
+  & > span {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 15px;
+    color: white;
+  }
+`
+
+export const FinishButton = styled.button`
+  border: none;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 5px;
 `
