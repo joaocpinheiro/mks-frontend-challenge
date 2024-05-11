@@ -93,6 +93,19 @@ export const CardCartContent = styled.div`
   }
 `
 
+export const ProductCardCartText = styled.h2`
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-left: 0;
+  text-overflow: ellipsis;
+
+  @media (min-width: 768px) {
+    line-height: 17px;
+    font-size: 13px;
+  }
+`
+
 export const CardButtonsWrapper = styled.div`
   display: flex;
   align-items: center;

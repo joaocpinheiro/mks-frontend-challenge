@@ -62,6 +62,11 @@ export const ProductText = styled.h2`
   font-size: 16px;
   line-height: 19px;
   margin-left: 0;
+  text-overflow: ellipsis;
+
+  @media (min-width: 768px) {
+    line-height: 17px;
+  }
 `
 
 export const SubText = styled.p`

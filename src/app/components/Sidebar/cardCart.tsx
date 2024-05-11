@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { ProductText } from '../Main/mainContentStyle'
 import {
   ArticleWrapper,
   CardButtonAmountContent,
@@ -9,6 +8,7 @@ import {
   CardButtonsWrapper,
   CardCartContent,
   CardCartWrapper,
+  ProductCardCartText,
   TextButtonContent,
 } from './cardCartStyles'
 import { PriceButton } from '@/app/themes/globalStyle'
@@ -28,7 +28,9 @@ export function CardCart() {
               alt=""
             />
             <CardCartContent>
-              <ProductText>Apple Watch Series 4 GPS</ProductText>
+              <ProductCardCartText>
+                Apple Watch Series 4 GPS
+              </ProductCardCartText>
 
               <CardButtonsWrapper>
                 <TextButtonContent>
