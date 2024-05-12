@@ -37,6 +37,9 @@ export const PriceButton = styled.button`
   color: white;
   line-height: 15px;
   cursor: pointer;
+
+  margin-left: auto;
+  margin-right: 11px;
 `
 
 export const BuyButton = styled.button`

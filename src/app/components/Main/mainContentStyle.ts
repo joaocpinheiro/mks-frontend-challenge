@@ -51,9 +51,10 @@ export const CardContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 
   > h2 {
-    flex-basis: 60%;
+    flex-basis: 50%;
   }
 `
 
@@ -61,7 +62,7 @@ export const ProductText = styled.h2`
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  margin-left: 0;
+  margin-left: 8px;
   text-overflow: ellipsis;
 
   @media (min-width: 768px) {
@@ -74,4 +75,5 @@ export const SubText = styled.p`
   width: 221px;
   font-size: 10px;
   line-height: 12px;
+  margin-left: 3;
 `
