@@ -60,6 +60,7 @@ export const BuyButton = styled.button`
   margin-bottom: 0;
   border-bottom: 0;
   cursor: pointer;
+  margin-top: auto;
 
   & > img {
     padding: 0;
@@ -68,6 +69,13 @@ export const BuyButton = styled.button`
     max-height: 30px;
     display: flex;
     margin-right: 16px;
+
+    @media (min-width: 768px) {
+      translate: 0 -12px;
+    }
+    @media (min-width: 1024px) {
+      translate: 0 -15px;
+    }
   }
 `
 

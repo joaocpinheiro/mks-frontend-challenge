@@ -14,12 +14,21 @@ import { BuyButton, PriceButton } from '../../themes/globalStyle'
 import shoppingBag2 from '@/../public/icons/shoppingBag2.svg'
 import { getProducts } from '@/api/products'
 import { useQuery } from '@tanstack/react-query'
+import { useCart } from '@/contexts/cart-context'
+import { Product } from '@/data/products'
 
 export function MainContent() {
   const { data: products } = useQuery({
     queryKey: ['products'],
     queryFn: getProducts,
   })
+
+  const { addToCart } = useCart()
+
+  function handleAddProductToCart(product: Product) {
+    const id = String(product.id)
+    addToCart(product, id)
+  }
 
   return (
     <MainWrapper>
@@ -39,7 +48,7 @@ export function MainContent() {
                 <PriceButton>R${Number(product.price)}</PriceButton>
               </CardContent>
               <SubText>Redesigned from scratch and completely revised.</SubText>
-              <BuyButton>
+              <BuyButton onClick={() => handleAddProductToCart(product)}>
                 <Image src={shoppingBag2} width={17} height={19} alt="" />
                 COMPRAR
               </BuyButton>

@@ -28,7 +28,7 @@ export const MainWrapper = styled.main`
 
 export const CardWrapper = styled.div`
   max-width: 250.5px;
-  max-height: 328px;
+  height: 328px;
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1352);
   display: flex;
   flex-direction: column;
@@ -44,6 +44,15 @@ export const CardWrapper = styled.div`
 
   @media (min-width: 1024px) {
     margin-right: 22px;
+    width: 217px;
+    max-height: 285px;
+    box-sizing: border-box;
+
+    & img {
+      margin-bottom: -10px;
+      width: 127px;
+      height: 158.82px;
+    }
   }
 `
 
@@ -55,6 +64,9 @@ export const CardContent = styled.div`
 
   > h2 {
     flex-basis: 50%;
+  }
+
+  @media (min-width: 768px) {
   }
 `
 

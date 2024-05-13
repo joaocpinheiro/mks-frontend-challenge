@@ -60,7 +60,7 @@ export const CardCartWrapper = styled.div`
     height: 95px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin: 0 auto;
     border-radius: 10px;
@@ -71,6 +71,7 @@ export const CardCartWrapper = styled.div`
       width: 46px;
       height: 57px;
       translate: 0 -10px;
+      margin-left: 10px;
       margin-right: 0px;
     }
   }
@@ -88,7 +89,7 @@ export const CardCartContent = styled.div`
     justify-content: center;
 
     & h2 {
-      max-width: 113px;
+      max-width: 100%;
     }
   }
 `
@@ -97,23 +98,30 @@ export const ProductCardCartText = styled.h2`
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  margin-left: 0;
   text-overflow: ellipsis;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: 768px) {
+    display: flex;
+    justify-content: start;
     line-height: 17px;
     font-size: 13px;
+    margin-left: 10px;
+    width: 110px;
   }
 `
 
 export const CardButtonsWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-bottom: 21px;
 
   @media (min-width: 768px) {
     margin-bottom: 0;
+    margin-left: auto;
   }
 `
 
