@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/GlobalStyled.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/GlobalStyled.jsx", "__tests__/sidebar.test.jsx", "src/app/components/__tests__/sidebar.test.jsx"],
   "exclude": ["node_modules"]
 }

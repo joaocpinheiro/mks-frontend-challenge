@@ -1,5 +1,6 @@
 'use client'
 
+import { defaultTheme } from '@/app/themes/defaultTheme'
 import styled from 'styled-components'
 
 export const ArticleWrapper = styled.article`
@@ -60,7 +61,7 @@ export const CardCartWrapper = styled.div`
     height: 95px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 0 auto;
     border-radius: 10px;
@@ -87,6 +88,7 @@ export const CardCartContent = styled.div`
     font-size: 13px;
     align-items: center;
     justify-content: center;
+    width: 85%;
 
     & h2 {
       max-width: 100%;
@@ -116,24 +118,31 @@ export const ProductCardCartText = styled.h2`
 export const CardButtonsWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-bottom: 21px;
 
   @media (min-width: 768px) {
+    justify-content: space-between;
     margin-bottom: 0;
-    margin-left: auto;
   }
 `
 
 export const TextButtonContent = styled.div`
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   & > p {
     display: none;
   }
 
   @media (min-width: 768px) {
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    margin-left: auto;
     & > p {
+      margin-right: auto;
       display: flex;
       flex-direction: column;
       margin-bottom: 1px;
@@ -157,6 +166,7 @@ export const CardButtonAmountContent = styled.div`
   margin-right: 29px;
 
   @media (min-width: 768px) {
+    justify-content: space-around;
     min-width: 60px;
     font-size: 14px;
   }
@@ -168,6 +178,11 @@ export const CardButtonAmountDecrement = styled.button`
   cursor: pointer;
   border: none;
   background-color: transparent;
+  height: 100%;
+  &:hover {
+    background: ${defaultTheme.colors.mainBlue};
+    transition: 0.3s;
+  }
 `
 
 export const CardButtonAmountNumber = styled.span`
@@ -189,4 +204,10 @@ export const CardButtonAmountIncrement = styled.button`
   cursor: pointer;
   border: none;
   background-color: transparent;
+  height: 100%;
+  margin-right: auto;
+  &:hover {
+    background: ${defaultTheme.colors.mainBlue};
+    transition: 0.3s;
+  }
 `

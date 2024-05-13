@@ -15,16 +15,9 @@ import {
 } from './cardCartStyles'
 import { PriceButton } from '@/app/themes/globalStyle'
 import { useCart } from '@/contexts/cart-context'
-import { useQuery } from '@tanstack/react-query'
-import { getProducts } from '@/api/products'
 
 export function CardCart() {
   const { items, decrement, increment, deleteCart } = useCart()
-
-  const { data: productsApi } = useQuery({
-    queryKey: ['products'],
-    queryFn: getProducts,
-  })
 
   function handleDecrement(id: string) {
     decrement(id)
@@ -40,7 +33,7 @@ export function CardCart() {
 
   return (
     <ArticleWrapper>
-      {productsApi &&
+      {items &&
         items?.map((product, i) => {
           return (
             <CardCartWrapper key={i}>

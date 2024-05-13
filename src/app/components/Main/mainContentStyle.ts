@@ -49,7 +49,7 @@ export const CardWrapper = styled.div`
     box-sizing: border-box;
 
     & img {
-      margin-bottom: -10px;
+      margin-bottom: -25px;
       width: 127px;
       height: 158.82px;
     }

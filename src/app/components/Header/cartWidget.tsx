@@ -29,7 +29,7 @@ export function CartWidget() {
           height={18}
           alt=""
         />
-        <span>{items.length}</span>
+        <span>{items?.length}</span>
       </ButtonCart>
     </>
   )

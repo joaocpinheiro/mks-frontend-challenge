@@ -24,7 +24,7 @@ export const HeadLogo = styled.header`
   }
 
   @media (min-width: 768px) {
-    margin-bottom: 110px;
+    margin-bottom: 90px;
     height: 100px;
 
     & > h1 {

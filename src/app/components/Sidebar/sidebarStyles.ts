@@ -79,6 +79,10 @@ export const BlackCloseButton = styled.button`
   max-width: 330px;
   z-index: 10;
   cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
 
   @media (min-width: 768px) {
     color: white;
@@ -125,6 +129,10 @@ export const FinishButton = styled.button`
   font-size: 20px;
   margin-top: 5px;
   cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
 
   @media (min-width: 768px) {
     position: absolute;

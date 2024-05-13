@@ -16,9 +16,10 @@ import { getProducts } from '@/api/products'
 import { useQuery } from '@tanstack/react-query'
 import { useCart } from '@/contexts/cart-context'
 import { Product } from '@/data/products'
+import { SkeletonScreenMain } from './skeletonScreenMain'
 
 export function MainContent() {
-  const { data: products } = useQuery({
+  const { data: products, isLoading: isLoadingProducts } = useQuery({
     queryKey: ['products'],
     queryFn: getProducts,
   })
@@ -32,8 +33,16 @@ export function MainContent() {
 
   return (
     <MainWrapper>
+      {isLoadingProducts &&
+        Array.from({ length: 8 }).map((_, i) => {
+          return (
+            <div key={i}>
+              <SkeletonScreenMain />
+            </div>
+          )
+        })}
       {products &&
-        products.products.map((product, i) => {
+        products?.products?.map((product, i) => {
           return (
             <CardWrapper key={i}>
               <Image

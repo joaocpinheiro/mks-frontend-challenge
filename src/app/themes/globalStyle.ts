@@ -40,6 +40,10 @@ export const PriceButton = styled.button`
 
   margin-left: auto;
   margin-right: 11px;
+  &:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
 `
 
 export const BuyButton = styled.button`
@@ -61,6 +65,10 @@ export const BuyButton = styled.button`
   border-bottom: 0;
   cursor: pointer;
   margin-top: auto;
+  &:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
 
   & > img {
     padding: 0;
@@ -74,7 +82,7 @@ export const BuyButton = styled.button`
       translate: 0 -12px;
     }
     @media (min-width: 1024px) {
-      translate: 0 -15px;
+      translate: 0 -23px;
     }
   }
 `
