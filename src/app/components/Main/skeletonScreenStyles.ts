@@ -6,6 +6,8 @@ export const Skeleton = styled.div`
   background-color: #f0f0f0;
   animation: pulse 1s infinite alternate;
   margin-top: 18px;
+  margin-right: auto;
+  margin-left: auto;
 
   @keyframes pulse {
     0% {
