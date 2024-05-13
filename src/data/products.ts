@@ -8,7 +8,6 @@ export interface Product {
   createdAt: string
   updatedAt: string
 }
-
 export interface ProductResponse {
   products: Product[]
   count: number
