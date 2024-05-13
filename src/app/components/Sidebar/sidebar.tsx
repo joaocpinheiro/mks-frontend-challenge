@@ -1,3 +1,4 @@
+import { useCart } from '@/contexts/cart-context'
 import { CardCart } from './cardCart'
 import {
   SidebarWrapper,
@@ -17,6 +18,17 @@ export function Sidebar({ active }: props) {
     active(false)
   }
 
+  const { items } = useCart()
+
+  function getTotal() {
+    let sum = 0
+    items?.map((item) => {
+      sum += +item.product.price * item.quantity
+      return sum
+    })
+    return sum
+  }
+
   return (
     <>
       <SidebarWrapper>
@@ -32,7 +44,12 @@ export function Sidebar({ active }: props) {
           <CardCart></CardCart>
           <TotalContainer>
             <h2>Total:</h2>
-            <span>R$ 798</span>
+            <span>
+              {getTotal().toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+              })}
+            </span>
           </TotalContainer>
           <FinishButton>Finalizar compra</FinishButton>
         </SidebarBody>

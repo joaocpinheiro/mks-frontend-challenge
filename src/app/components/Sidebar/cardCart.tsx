@@ -19,20 +19,32 @@ import { useQuery } from '@tanstack/react-query'
 import { getProducts } from '@/api/products'
 
 export function CardCart() {
-  const { addToCart, items } = useCart()
+  const { items, decrement, increment, deleteCart } = useCart()
 
   const { data: productsApi } = useQuery({
     queryKey: ['products'],
     queryFn: getProducts,
   })
 
+  function handleDecrement(id: string) {
+    decrement(id)
+  }
+
+  function handleIncrement(id: string) {
+    increment(id)
+  }
+
+  function handleDelete(id: string) {
+    deleteCart(id)
+  }
+
   return (
     <ArticleWrapper>
       {productsApi &&
-        items.map((product, i) => {
+        items?.map((product, i) => {
           return (
             <CardCartWrapper key={i}>
-              <span>X</span>
+              <span onClick={() => handleDelete(product.id)}>X</span>
               <Image
                 src={product.product.photo}
                 width={1002}
@@ -49,15 +61,25 @@ export function CardCart() {
                   <TextButtonContent>
                     <p>Qtd</p>
                     <CardButtonAmountContent>
-                      <CardButtonAmountDecrement>-</CardButtonAmountDecrement>
+                      <CardButtonAmountDecrement
+                        onClick={() => handleDecrement(product.id)}
+                      >
+                        -
+                      </CardButtonAmountDecrement>
 
                       <CardButtonAmountNumber>
                         {product.quantity}
                       </CardButtonAmountNumber>
-                      <CardButtonAmountIncrement>+</CardButtonAmountIncrement>
+                      <CardButtonAmountIncrement
+                        onClick={() => handleIncrement(product.id)}
+                      >
+                        +
+                      </CardButtonAmountIncrement>
                     </CardButtonAmountContent>
                   </TextButtonContent>
-                  <PriceButton>R${product.product.price}</PriceButton>
+                  <PriceButton onClick={() => handleIncrement(product.id)}>
+                    R${product.product.price}
+                  </PriceButton>
                 </CardButtonsWrapper>
               </CardCartContent>
             </CardCartWrapper>
